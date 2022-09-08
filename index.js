@@ -20,7 +20,7 @@ config();
 
 
 const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:'https://legendary-squirrel-ab4f6d.netlify.app', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
