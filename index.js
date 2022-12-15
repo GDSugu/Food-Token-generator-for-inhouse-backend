@@ -22,9 +22,9 @@ const app = express();
 config();
 
 const corsOptions ={
-    origin:'https://legendary-squirrel-ab4f6d.netlify.app',
+    // origin:'https://legendary-squirrel-ab4f6d.netlify.app',
    
-    // origin:'http://localhost:3000', 
+    origin:'http://localhost:3000', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
