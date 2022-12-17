@@ -1,7 +1,8 @@
 const {MongoClient} = require("mongodb");
 
 const log = require("./log");
-
+let MONGO_URL="mongodb+srv://sugumar:Sukhs%409532@cluster0.lvwzqfb.mongodb.net/?retryWrites=true&w=majority"
+let MONGO_NAME = food
 
 const mongo = {
     db:null,     //DB connection string
@@ -17,7 +18,7 @@ const mongo = {
     async connect() {
         try {
             //Connecting to Mongo( server)
-           const client = new MongoClient(process.env.MONGO_URL);
+           const client = new MongoClient(MONGO_URL);
             // using await in order to wait utill it get response
            await client.connect();
            log("Mongo Connected Successfully");
@@ -25,8 +26,8 @@ const mongo = {
            log(process.env.MONGO_URL);
        
            // Selecting the DB
-            this.db = await client.db(process.env.MONGO_NAME);
-           log(` Mongo database selected - ${process.env.MONGO_NAME}`);
+            this.db = await client.db(MONGO_NAME);
+           log(` Mongo database selected - ${MONGO_NAME}`);
        
            
             this.pizza = await this.db.collection("pizza");
