@@ -2,7 +2,7 @@ const {MongoClient} = require("mongodb");
 
 const log = require("./log");
 let MONGO_URL="mongodb+srv://sugumar:Sukhs%409532@cluster0.lvwzqfb.mongodb.net/?retryWrites=true&w=majority"
-let MONGO_NAME = food
+let MONGO_NAME = "food"
 
 const mongo = {
     db:null,     //DB connection string
