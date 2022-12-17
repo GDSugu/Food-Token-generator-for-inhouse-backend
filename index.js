@@ -36,7 +36,9 @@ const handler = (async() => {
 
         // PARSE REQUEST BODY AS JSON
         app.use(express.json());
-        
+        app.get('/',(req,res)=>{
+    res.send("Food token generator")
+})
         //LOGGING MIDDLEWARE
 
             app.use(middleware.logging);
